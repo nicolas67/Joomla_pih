@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="plugin" group="content">
+	<name>Include Content Item</name>
+	<author>kksou</author>
+	<creationDate>Oct 2011</creationDate>
+	<copyright>(C) kksou.com. All Rights Reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>support@kksou.com</authorEmail>
+	<authorUrl>www.kksou.com/php-gtk2/</authorUrl>
+	<version>3.0.12</version>
+	<description>This plugin allows you to insert or include one content item into another content item.</description>
+	<files>
+		<filename plugin="include_content_item">include_content_item.php</filename>
+		<filename>include_content_item/include_content_item.lib.php</filename>
+		<filename>include_content_item/jquery-1.11.1.min.js</filename>
+	</files>
+</extension>
+
