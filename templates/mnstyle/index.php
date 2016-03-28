@@ -73,14 +73,14 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
     <!-- en-tête -->
     <div id="header" class="row white">
         <!-- logo -->
-        <div id="logo" class="col-xs-12 col-sm-5 col-md-4 pa-no-h">
+        <div id="logo" class="col-xs-12 col-sm-4 col-md-3 pa-no-h">
             <a href="<?php echo $this->baseurl; ?>">
                 <img src="<?php echo JURI::root() ?>templates/<?php echo $this->template ?>/img/logo.png" alt="<?php echo JFactory::getApplication()->getCfg('sitename') ?>" /> 
             </a>
         </div>
         <!-- menu principal -->
         <?php if ($this->countModules('menu-haut')): ?>
-        <div id="nav" class="col-xs-12 col-sm-7 col-md-8 pa-no-h">
+        <div id="nav" class="col-xs-12 col-sm-8 col-md-9 pa-no-h">
             <jdoc:include type="modules" name="menu-haut" style="none" />
         </div>
         <?php endif; ?>
