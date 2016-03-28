@@ -19,24 +19,6 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 	?>
     <?php
 	// verifies si on a besoin des colonnes
-	/*
-	$nbmodulesrowCentre = 0;
-    if (!$this->countModules('module-gauche'))
-    {
-		$nbmodulesrowCentre++;
-    }
-    if (!$this->countModules('module-droit') || $app->input->getCmd('task', '') == 'edit')
-    {
-		$nbmodulesrowCentre++;
-    }
-	$nbmodulesrowCentre2 = 12;
-	switch($nbmodulesrowCentre)
-	{
-		case 1 : $nbmodulesrowCentre2 = 8;$nbmodulesrowCentre=9;break;
-		case 2 : $nbmodulesrowCentre2 = 4;$nbmodulesrowCentre=6;break;
-		default : $nbmodulesrowCentre2 = 12;$nbmodulesrowCentre=12;
-	}
-	*/
 	$mainclass = '';
 	if (!$this->countModules('module-gauche'))
 	{
@@ -51,12 +33,6 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
     
 </head>
 <body>
-
-<!-- 
-<div id="background"> 
-	<img src="templates/<?php echo $this->template ?>/images/bandeau.jpg" alt="background" />	
-</div>
--->
 
 <!-- debut wrapper 1 -->
 <div class="container-fluid"> 
@@ -86,7 +62,7 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
         <?php endif; ?>
     </div>
 	
-    <!-- ***************************************** -->
+    <!-- ***************************************** -->       
     <!-- 4 modules : images / animations / annonce succincte... -->
     <?php if ($nbmodulesrowHaut): ?>
 	<div class="row">
@@ -124,7 +100,11 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 	
 		
 		<?php if ($this->countModules('module-gauche')): ?>
-		<!-- <div class="white gauche col-sm-4 col-md-3"> -->
+		<?php
+		/*
+		<div class="white gauche col-sm-4 col-md-3">
+		*/
+		?>
 		<div id="gauche" class="white gauche">
 			<jdoc:include type="modules" name="module-gauche" style="xhtml" />
 		</div>
@@ -137,8 +117,8 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 		<div class="col-sm-<?php echo $nbmodulesrowCentre2; ?> col-md-<?php echo $nbmodulesrowCentre; ?>">
 		*/
 		?>
-		<div id="milieu" class="white milieu">
 		
+		<div id="milieu" class="white milieu">
     <!-- file d'ariane : position haute -->
 			<?php if ($this->countModules('ariane')): ?>
 			<div id="ariane" class="">
