@@ -1,0 +1,152 @@
+
+.sidebar-right{
+
+
+	.moduletable_right_top_house{
+		
+
+		.featured_houses_inline{
+			margin: 0 15px 11.2px 0;
+		}
+
+        .rem_house_viewlist,
+        .featured_houses_block{
+          background-color: @button_bg_color;  
+        }
+
+		.featured_houses_block{
+            border-width: 0px;
+            .transition;
+
+          a{ color: #a3a3a3;
+
+            &:hover{color: @main_meni_li_hover_color;}
+
+          }
+
+          .featured_houses_title{
+            text-transform: uppercase;
+            font-size: 16px;
+          }
+		}
+
+        .col_rent{font-size: 16px;}
+
+	}
+
+
+	.moduletable_new_houses{
+
+        .featured_list_title{display: none;}
+
+        .featured_list_viewlisting{
+        padding: 0px;
+        margin-top: 19px;
+        }
+
+        .featured_list_viewlisting a{
+         padding: 5.5px 15px;
+         color: @colorWhite;
+         .theme_button_hover;
+         }
+	}
+
+
+    @media @desktop{
+
+        .moduletable_right_top_house{
+
+            .featured_houses_block{
+                width: 212px !important;
+            }
+
+            img{ 
+            width: 100% !important;
+            height: auto !important;
+            }
+
+            .feature_texthouse{padding-bottom: 0px;}
+
+                .feature_texthouse > *{width: 100%;}
+
+                .rem_house_viewlist{ padding-top: 5px;}
+
+        }
+    }
+
+     @media @tablet{
+
+        .moduletable_right_top_house{
+
+            .featured_houses + div { display: none;}
+
+                .featured_houses_block{
+                width: 157.5px !important;
+                }
+
+        }
+
+     }
+
+     @media (max-width: 736px){
+
+        .moduletable_right_top_house{
+
+            .featured_houses_price {display: block;}
+            .featured_houses_viewlisting{float: none;}
+
+        }
+
+     }
+
+
+     @media (max-width: 736px) and  (min-width: 569px){
+
+        .moduletable_new_houses{
+
+            .featured_houses_line{
+                float: left;
+                margin-left: 3%;
+                width: 45%;
+            }
+
+        }
+     }
+
+
+      @media (max-width: 569px) and  (min-width: 481px){
+
+
+        .moduletable_new_houses{
+
+            .featured_houses_line{
+                float: left;
+                margin-left: 2%;
+                width: 47%;
+            }
+
+        }
+
+
+
+      }
+
+
+
+
+
+    @media @mobile{
+
+        .moduletable_new_houses{
+
+            .featured_houses_line{
+             max-width: 320px;
+             margin-left: auto;
+             margin-right: auto;
+         }
+
+       } 
+    } 
+
+
+} 

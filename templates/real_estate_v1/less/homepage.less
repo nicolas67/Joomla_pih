@@ -1,0 +1,513 @@
+
+
+.main_slider,
+.moduletable_right_top_house{
+    margin-top: 30px;
+}
+
+.moduletable_top_houses .featured_houses,
+.moduletable_new_houses .basictable,
+#gallery_rem{
+
+    &>div[class*="featured"]{ background-color: @colorWhite;}
+}
+
+
+.moduletable_top_houses .featured_houses,
+#gallery_rem{
+
+    &>div{  padding-bottom: 20px;}
+
+    .rem_house_viewlist{
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    padding: 0px;
+    .theme_button_hover;
+    .theme_button_hover_a;
+
+    a{padding: 10px;}
+    }
+
+
+}
+
+
+
+
+.main_slider{
+
+    & ~ div{display: none;}
+
+   #captionSlide{
+    background-color: @colorBlack;
+     background-color: rgba(0, 0, 0, 0.9);
+    bottom: 10%;
+    display: block;
+    left: 5%;
+    margin: 0;
+    position: absolute;
+    width: 500px;
+    padding: 20px;
+    text-align: left;
+
+
+        .slide-title{
+            .text_cut;
+            line-height: 40px;
+        }
+
+        .slide-title a{
+            .header_style(
+            uppercase, 
+            "Open Sans",
+            400, 
+            24px,
+            @colorWhite,
+            0px,
+            #c2c3c4,
+            0px
+            );
+            white-space: nowrap;
+
+            &:hover{ color: @main_meni_li_hover_color;}
+
+        }
+
+        div{font-size: 14px;}
+
+    }
+
+
+}
+
+
+
+
+ @full_search_houses_input--width:160px;
+@desctop_search_houses_input--width: 165px;
+@tablet_search_houses_input--width:200px;
+@mobile_search_houses_input--width:232px;
+@search_houses_input--width: @full_search_houses_input--width;
+ @select_catid--width: @search_houses_input--width - 60px;
+
+.moduletable_main_search{
+    padding: 5px 5px 10px 10px;
+    margin-top: 47px;
+    background: @main_meni_li_active_bg_color;
+
+    #rem_mod_search{ 
+    display: block;
+
+        input,
+        select{font-size: 13px;}
+
+        .modSearchSelect.inputbox ,
+        #catid{ height: 40px;}
+
+        .inputbox,
+        .hasDatepicker,
+        #pricefrom,
+        #priceto
+        { height: 30px;}
+
+        #rem_slider_mod{ margin: 20px 0 16px 7px;}
+
+       
+
+        input.inputbox{width: @search_houses_input--width;}
+        #catid { width: @select_catid--width !important;}
+
+        #rem_slider_mod { width: 94%;}
+
+        .modSearchSelect.inputbox{width: 74px !important;}
+
+    }
+
+        .search_button{
+        display: block;
+
+        .button{
+        margin-left: auto;
+        margin-top: 10px;
+        margin-right: 10px;
+        font-size: 13px;
+        display: block;}
+    }
+
+}
+
+
+
+.moduletable_new_houses,
+.moduletable_top_houses{
+
+    .featured_houses_block {
+    position: relative;
+    overflow: hidden;}
+}
+
+
+
+
+.moduletable_top_houses{
+
+    .basictable{margin-left: 9px;}
+
+        .featured_houses_block{      
+        width: 264px !important;
+        margin:  0 5px 15px;
+
+            img{ width: 100% !important;}
+
+            .featured_houses_title{
+            text-align: left;
+
+                a{
+                display: block;
+                .text_cut;
+                .text_element_property
+                (
+                inherit,
+                400,
+                16px,
+                #838383,
+                19px
+                );
+                text-transform: uppercase;
+                white-space: nowrap;
+                }
+
+                    a:hover{ color: @main_meni_li_hover_color;}
+                }
+
+                .featured_houses_inline{
+                border-bottom: 1px solid  @border-color;
+                margin: 0 0 10px;
+                padding: 0 0 10px;
+                display: block;
+                width: auto;
+
+                .text_element_property
+                (
+                Arial,
+                400,
+                11px,
+                @colorDarcGray,
+                inherit
+                );
+                }
+
+        }
+}
+
+
+.moduletable_main_slider,
+.moduletable_main_search,
+.moduletable_new_houses,
+.moduletable_top_houses,
+.moduletable_footer_top_houses,
+.moduletable_right_top_house{
+
+    &>div:last-child{display: none;}
+}
+
+
+
+    #Go_Top,
+    #Go_Bottom{
+    position: fixed;
+    z-index: 9999;
+    width:50px;
+    height: 25px;
+    .theme_button_hover; 
+    cursor: pointer;
+    right: 1px;
+    .ms_opacity(0.8);
+    .opacity(0.8);
+    .transition;
+
+        &.arrow--hide{ 
+        pointer-events: none;
+        .ms_opacity(0);
+        .opacity(0);
+        }
+
+         .arrow{
+        margin: 7px auto; 
+        .transition(0.1s);
+        }
+
+
+        &:hover *{ 
+        .transform(1.25);
+        .transition(0.2s);}
+
+        &:hover{ 
+        .opacity(1);}
+
+        @media (max-width: 767px){
+        display: none;
+        }
+
+    }
+
+
+    #Go_Top{
+    bottom: 60px;
+
+        & .arrow{.mixin_top_trial;}
+
+        &:active{bottom: 58px;}
+
+    }
+
+    #Go_Bottom{bottom: 20px;
+
+         & .arrow{.mixin_bottom_trial;}
+
+          &:active{bottom: 18px;}
+    }
+
+
+
+
+
+ @media @desktop  and (min-width: 769px){
+
+    .moduletable_top_houses{
+
+        .featured_houses_price,
+        .featured_houses_viewlisting{
+        display: block;
+        float: none;  
+        }
+
+    }
+ }
+
+
+
+
+    @captionSlide--left: (100% -@captionSlide--width ) / 2;
+
+    @media @desktop{
+
+     .main_slider{
+        @captionSlide--width: 80%;
+
+
+            #captionSlide{
+            left: @captionSlide--left;
+            width: @captionSlide--width;
+            }
+
+        }
+
+        .moduletable_top_houses{
+
+            .featured_houses_block{
+            width: 216px !important;
+            }
+
+        }
+
+
+        .moduletable_main_search{
+
+             @search_houses_input--width: @desctop_search_houses_input--width;
+
+            // .com_realestatemanager_main_search{margin-left: 17%;}
+
+            #rem_mod_search{
+
+                input.inputbox{width: @search_houses_input--width;}
+                #catid { width: @select_catid--width !important;}
+            //     .modSearchSelect.inputbox{width: 81px !important;}
+
+            }
+
+                .search_button{
+                display: inline-block;
+                margin-bottom: -12px;}    
+        }
+
+        .moduletable_top_houses{
+
+            .basictable{margin-left: 0.8%;}
+
+
+        }
+
+        #Go_Top,
+        #Go_Bottom{
+        width: 41px;
+        }
+    }
+
+
+
+
+    @media @tablet  and (min-width: 481px){
+
+        .moduletable_main_search form>*:nth-child(2){margin-left: 26px;}
+
+    }
+
+
+
+    @media @tablet{
+
+        .main_slider{
+
+            #captionSlide{
+            bottom: 5%;
+            }
+
+        }
+
+        .moduletable_main_search{
+
+            .com_realestatemanager_main_search{margin-left: 7%;}
+
+             .search_button{margin-bottom: 0px;}
+
+               #rem_mod_search{
+
+                    @search_houses_input--width: @tablet_search_houses_input--width;
+                    input.inputbox{width: @search_houses_input--width;}
+                    #catid { width: @select_catid--width !important;}
+
+                }
+        }
+
+        .moduletable_top_houses{
+
+            .basictable{
+                margin-left: 0.5%;
+            }
+
+            .featured_houses_block{
+                width: 252px !important;
+            }
+
+        }
+
+        #Go_Top,
+        #Go_Bottom{
+        width: 23px;
+        padding: 5px 0;
+        height: 35px;
+        } 
+
+    }
+
+
+
+
+
+@media (max-width: 736px){
+
+    .sidebar-right .moduletable_right_top_house {
+
+            .featured_houses>div{
+            display: block;
+            margin: 0px auto 15px auto;
+            margin-left: auto;
+            margin-right: auto;                 
+            width: 100% !important;
+            max-width: 320px;
+            }
+        }
+
+}
+
+
+
+
+    @media @mobile{
+
+        @captionSlide--width: 75%;
+
+        .main_slider{
+
+            .realestateSlider.horizontal{
+
+                .arrow-left{ left: 0px;}
+                .arrow-right{ right: 0px;}
+
+            }
+
+            #captionSlide{
+            left: @captionSlide--left;
+            width: @captionSlide--width;
+
+                .slide-title a{ font-size: 18px;}
+            }
+
+            .slide-description{display: none;}
+
+        }
+
+
+        .moduletable_main_search{
+            padding: 5px 5px 10px;
+
+            .com_realestatemanager_main_search{margin-left: 3%;}
+
+             #rem_mod_search{
+
+                @search_houses_input--width: @mobile_search_houses_input--width;
+                input.inputbox{width: @search_houses_input--width;}
+                #catid { width: @select_catid--width !important;}
+
+                input.hasDatepicker{ width: 60%;}
+
+                .modSearchSelect.inputbox{width: 56% !important;}
+            } 
+
+            form>div:nth-child(4) {width: 100%;}
+
+            .search_button{
+            position: relative;
+            left: -1.7%;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 69%;
+
+                input{width: 100%;}
+            }
+        } 
+
+
+        .moduletable_top_houses{
+
+            .basictable{margin-left: 0px;}
+
+                .featured_houses_block{
+                   
+                }
+
+                img{height: auto !important;}
+        }
+
+        .moduletable_top_houses 
+         {
+
+            .featured_houses>div{
+            display: block;
+            margin: 0px auto 15px auto;
+            margin-left: auto;
+            margin-right: auto;                 
+            width: 100% !important;
+            }
+        }
+
+    }
+
+
+
+
+
+

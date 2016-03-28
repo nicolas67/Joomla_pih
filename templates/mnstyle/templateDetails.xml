@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/2.5/template-install.dtd">
+<extension version="3.0" type="template" client="site" method="upgrade">
+    <name>mnstyle</name>
+    <version>1.0</version>
+    <creationDate>Janvier 2016</creationDate>
+    <author>Nicolas Lacombe</author>
+    <authorEmail>nicolas.lacombe67@gmail.com</authorEmail>
+    <copyright>Copyright (C) 2016 société MN All rights reserved.</copyright>
+    <description>TPL_MNSTYLE_XML_DESCRIPTION</description>
+    <files>
+        <filename>img/favicon.png</filename>
+        <filename>img/logo.png</filename>
+        <filename>index.html</filename>
+        <filename>index.php</filename>
+        <filename>templateDetails.xml</filename>
+        <folder>img</folder>
+        <folder>images</folder>
+        <folder>css</folder>
+    </files>
+    <positions>
+        <position>recherche</position>
+        <position>menu-haut</position>
+        <position>menu-bas</position>
+        <position>ariane</position>
+        <position>ariane-bas</position>
+        <position>module-haut-1</position>
+        <position>module-haut-2</position>
+        <position>module-haut-3</position>
+        <position>module-haut-4</position>
+        <position>slideshow</position>
+        <position>module-gauche</position>
+        <position>module-droit</position>
+        <position>module-bas-1</position>
+        <position>module-bas-2</position>
+        <position>module-bas-3</position>
+        <position>module-bas-4</position>
+        <position>informations</position>
+    </positions>
+    <languages folder="language">
+        <language tag="fr-FR">fr-FR/fr-FR.tpl_mnstyle.ini</language>
+        <language tag="fr-FR">fr-FR/fr-FR.tpl_mnstyle.sys.ini</language>
+    </languages>
+    <config>
+        <fields name="params">
+        <fieldset name="advanced">
+        <field 
+            name="styleBackgroundColor" 
+            type="color" 
+            default="#DFEBF7"
+            label="Couleur de fond"
+            description="Couleur de fond" />
+        <field 
+            name="styleTitleColor" 
+            type="color" 
+            default="#F09947"
+            label="Couleur des titres principaux"
+            description="Couleur des titres principaux" />
+        <field 
+            name="styleSubtitleColor" 
+            type="color" 
+            default="#204274"
+            label="Couleur des titres secondaires"
+            description="Couleur des titres secondaires" />
+        <field 
+            name="styleTextColor" 
+            type="color" 
+            default="#2E3031"
+            label="Couleur du text"
+            description="Couleur du text" />
+        <field 
+            name="styleBoxGradient" 
+            type="checkbox" 
+            default="1"
+            label="fond dégradé des modules"
+            description="active les fonds dégradé des modules" />
+        <field 
+            name="styleBoxColor1" 
+            type="color" 
+            default="#FFFFFF"
+            label="couleurs des modules"
+            description="couleur de fond des modules" />
+        <field 
+            name="styleBoxRepartition1" 
+            type="text" 
+            default="80%"
+            label="répartition du dégradé couleur 1"
+            description="répartition du dégradé de la 1ere couleur " />
+        <field 
+            name="styleBoxColor2" 
+            type="color" 
+            default="#DADADA"
+            label="couleurs des modules pour dégradé"
+            description="2ème couleur de fond des modules pour le dégradé" />
+        <field 
+            name="styleBoxRepartition2" 
+            type="text" 
+            default="80%"
+            label="répartition du dégradé couleur 2"
+            description="répartition du dégradé de la 2ème couleur" />
+        </fieldset>
+        </fields>
+    </config>
+</extension>

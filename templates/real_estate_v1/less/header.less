@@ -1,0 +1,144 @@
+.header{
+    background: #252b2b;
+    width: 100%;
+ 
+    #logo{
+        margin:0;
+        border: none;
+        position: relative;
+        z-index: 1;
+        text-align: center;
+
+        img{
+            border: none;
+            position: relative;
+            z-index: 1;
+        }
+
+        @media (max-width: 767px){
+            text-align: center;
+            padding: 10px 0 20px;
+        }
+    }
+
+    .opening_times_title{
+        color:@colorGray;
+        font-size: 20px;
+        margin: 0 0 2px 0;
+    }
+    .ot_desc{
+        font-size: 12px;
+        line-height: 14px;
+        color:@colorGray;
+        margin: 0;
+    }
+
+    .top-links{ 
+    border-bottom: 1px solid #343a3a;
+     padding-top: 10px;
+    }
+
+
+ .moduletable_email_us{
+    margin-top: 5px;
+
+    p{
+    margin-bottom: 0px;
+    .clearfix;
+    }
+
+    img {
+    float: left;
+    width: 22px;
+    }
+
+    span{
+    display: block;
+    float: left;
+    font-size: 13px;
+    }
+
+    a{color: #83888b;}
+
+    a:hover{ color:  @main_meni_li_active_bg_color;}
+
+ } 
+
+
+
+    .soc_icons_box{
+        text-align: right;
+        @media (max-width: 767px){
+            text-align: center;
+        }
+        ul{
+            
+            display:-moz-inline-stack;
+            display:inline-block;
+            list-style: none;
+            margin: 0px;
+
+            li{
+            float: left;
+            padding:0;
+            overflow: hidden;
+
+                a{
+
+                    font-size: 18px;
+                    padding: 7px;
+                    .transition;
+                    color:  @header_soc_icon_link_color;
+
+                    &:before{ display: block;}
+
+                    &:hover{
+                        .transition;
+                         color: @main_meni_li_active_bg_color;
+
+                         &:before{.animation(soc_icons);}  
+
+                         
+                    }
+                }
+
+            
+
+            }
+        }
+    }
+
+
+    @media (max-width: 767px){
+
+        .moduletable_email_us{
+
+            p{text-align: center;}
+
+            p>*{
+            display: inline-block;
+            float: none;}
+        }
+
+        .soc_icons{
+        display: block;
+        padding-top: 10px;
+        text-align: center;
+
+            li{display: inline-block;
+            float: none;}
+
+        }
+
+    }
+
+
+
+    .navbar-toggle:hover i{ color: @main_meni_li_hover_color;}
+}
+.navbar-collapse.in {
+    overflow-y: visible;
+    padding-bottom: 10px;
+}
+
+

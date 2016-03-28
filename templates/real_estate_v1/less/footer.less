@@ -1,0 +1,107 @@
+#footer{
+    background-color:  @title_color;
+    padding: 30px 0;
+    width: 100%;
+    margin-top: 10px;
+
+
+
+    h3{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    .header_style(
+    capitalize, 
+    inherit,
+    300,
+    24px,
+    @colorWhite 
+    );
+    text-align: left;
+    }
+
+    p,
+    .featured_houses_line .featured_list_title a,
+    .featured_houses_line .featured_houses_hits
+    {
+    font-size: 13px;
+    color:  @footer-text_color;
+    line-height: 20.5px;
+    }
+
+    a{color: @colorWhite;}
+
+    a:hover,
+    .featured_list_title a:hover{ color:  @main_meni_li_active_bg_color;}
+
+    .copyrights{
+    border-top: 1px solid #343a3a;
+    margin-top: 25px;
+    padding-top: 30px;
+
+        p {
+            margin:  0 ;
+            font-size: 16px;
+            line-height: 20px;
+            text-align: center;
+
+            a{ font-family: Arial;
+                font-size: 13px;
+            }
+
+        }
+    }
+
+    .moduletable_footer_top_houses{
+
+        @title_width: 8;
+        @hits_width: 2;
+
+        .featured_houses_line,
+        .rem_type_catlist,
+        .featured_list_title,
+        .featured_houses_hits{
+            padding: 0px;
+            background: none;
+            margin: 0px;
+            border-width: 0px;
+            display: block;
+        }
+
+        .featured_list_title{
+            float: left;
+            line-height: 1px;
+            width: @title_width * 10% ;
+            text-align: left;
+            .text_cut(auto,  @title_width * 10%,  ellipsis);
+        }
+
+        .rem_type_catlist{
+            float: right;
+            .text_cut(auto,  @hits_width * 10%,  ellipsis);
+            text-align: right;
+        }
+
+        .featured_list_title,
+        .rem_type_catlist{
+
+            &>*{ white-space: nowrap;}
+           
+        }
+
+    }
+
+    .moduletable_contact_info{
+
+            p{margin-bottom: 1px;}
+        }
+
+
+         @media @mobile{
+
+            h3{
+            margin-top: 20px;
+            text-align: center;
+            }
+         }
+    
+} 
