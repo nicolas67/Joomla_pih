@@ -17,16 +17,15 @@ html
 
 body
 {
-	background-color: #E9E5DC;
+	//background-color: #E9E5DC;
+	background-color: #F5F5F5;
 	background-image:  url(../images/bandeau.jpg);
 	background-position : center 0;
 	background-repeat : no-repeat;
 	background-size: 100% auto;
 	background-size: cover !important;
 	background-attachment: fixed !important;
-	
 }
-
 /*
 #background {
 position:fixed; 
@@ -353,8 +352,46 @@ color: #fff;
 	text-decoration: none;
 }
 
+.gauche ul.menu > li ,
+.droit ul.menu > li {
+	padding-left:10px;
+}
+
+.gauche ul.menu > li a,
+.droit ul.menu > li a{
+	color:#214375;
+	font-weight:600;
+}
+
+.gauche ul.menu > li a:hover,
+.droit ul.menu > li a:hover{
+	color:#B71D22;
+}
+
+.gauche ul.menu li ul ,
+.droit ul.menu li ul {
+	//border:1px solid #F09947;
+	//display:none;
+	padding-left:10px;
+	color:red;
+}
+
+.gauche ul.menu li:hover ul ,
+.droit ul.menu li:hover ul {
+	//display:block;
+}
+.gauche ul.menu li ul a ,
+.droit ul.menu li ul a{
+	color:#F09947;
+}
+
+.gauche ul.menu {
+	max-width:180px;
+}
+
 
 .conteneur { 
+
 	display: -webkit-box;
 	display: -moz-box;
 	display: -ms-flexbox;
@@ -367,6 +404,9 @@ color: #fff;
 	flex-flow: row;
 	flex-direction: row;
 
+}
+.conteneur2 {
+	justify-content: space-between;
 }
 .conteneur .gauche { order: 1; margin-right:5px; }
 .conteneur .milieu { order: 2; flex:1; padding-left:15px;}
@@ -573,4 +613,11 @@ h3.item-title a{
 	}
 }
 
-
+#modh1 , #modh2 , #modh3 , #modh4  {
+	width:25%;
+}
+#modh1 img, #modh2 img, #modh3 img, #modh4 img {
+	width:100%;
+	min-width:100px;
+	max-width:250px;
+}

@@ -53,24 +53,24 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
     <!-- ***************************************** -->       
     <!-- 4 modules : images / animations / annonce succincte... -->
     <?php if ($nbmodulesrowHaut): ?>
-	<div class="conteneur row">
+	<div class="conteneur conteneur2 row">
 		<?php if ($this->countModules('module-haut-1')) : ?>
-		<div class="<?php echo 'col-xs-'.(12/$nbmodulesrowHaut); ?> white module">
+		<div id="modh1" class="<?php echo 'col-xs-'.(12/$nbmodulesrowHaut); ?> module">
 			<jdoc:include type="modules" name="module-haut-1" style="xhtml" />
 		</div>
 		<?php endif; ?>
 		<?php if ($this->countModules('module-haut-2')) : ?>
-		<div class="<?php echo 'col-xs-'.(12/$nbmodulesrowHaut); ?> white module">
+		<div id="modh2" class="<?php echo 'col-xs-'.(12/$nbmodulesrowHaut); ?> module">
 			<jdoc:include type="modules" name="module-haut-2" style="xhtml" />
 		</div>
 		<?php endif; ?>
 		<?php if ($this->countModules('module-haut-3')) : ?>
-		<div class="<?php echo 'col-xs-'.(12/$nbmodulesrowHaut); ?> white module">
+		<div id="modh3" class="<?php echo 'col-xs-'.(12/$nbmodulesrowHaut); ?> module">
 			<jdoc:include type="modules" name="module-haut-3" style="xhtml" />
 		</div>
 		<?php endif; ?>
 		<?php if ($this->countModules('module-haut-4')) : ?>
-		<div class="<?php echo 'col-xs-'.(12/$nbmodulesrowHaut); ?> white module">
+		<div id="modh4" class="<?php echo 'col-xs-'.(12/$nbmodulesrowHaut); ?> module">
 			<jdoc:include type="modules" name="module-haut-4" style="xhtml" />
 		</div>
 		<?php endif; ?>
@@ -80,8 +80,7 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
     <!-- ***************************************** --> 
     <!-- centre --> 
     <!-- menu-gauche et centre -->
-    <div class="row ">
-	</div>
+  <div id="imageFond">
 	
 	
     <div id="conteneur" class="conteneur">
@@ -171,6 +170,7 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 		</div>
 	</div>
 	
+  </div>
 <!-- fin wrapper 1 -->
 </div>
 </div>
