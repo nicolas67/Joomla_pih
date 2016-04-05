@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/2.5/template-install.dtd">
+<extension version="3.0" type="template" client="site" method="upgrade">
+    <name>mnstyle</name>
+    <version>1.0</version>
+    <creationDate>Janvier 2016</creationDate>
+    <author>Nicolas Lacombe</author>
+    <authorEmail>nicolas.lacombe67@gmail.com</authorEmail>
+    <copyright>Copyright (C) 2016 société MN All rights reserved.</copyright>
+    <description>TPL_MNSTYLE_XML_DESCRIPTION</description>
+    <files>
+        <filename>img/favicon.png</filename>
+        <filename>img/logo.png</filename>
+        <filename>index.html</filename>
+        <filename>index.php</filename>
+        <filename>templateDetails.xml</filename>
+        <folder>img</folder>
+        <folder>images</folder>
+        <folder>css</folder>
+        <folder>js</folder>
+    </files>
+    <positions>
+        <position>recherche</position>
+        <position>menu-haut</position>
+        <position>menu-bas</position>
+        <position>ariane</position>
+        <position>ariane-bas</position>
+        <position>module-haut-1</position>
+        <position>module-haut-2</position>
+        <position>module-haut-3</position>
+        <position>module-haut-4</position>
+        <position>slideshow</position>
+        <position>module-gauche</position>
+        <position>module-droit</position>
+        <position>module-bas-1</position>
+        <position>module-bas-2</position>
+        <position>module-bas-3</position>
+        <position>module-bas-4</position>
+        <position>informations</position>
+    </positions>
+    <languages folder="language">
+        <language tag="fr-FR">fr-FR/fr-FR.tpl_mnstyle.ini</language>
+        <language tag="fr-FR">fr-FR/fr-FR.tpl_mnstyle.sys.ini</language>
+    </languages>
+    <config>
+        <fields name="params">
+			<fieldset name="advanced">
+
+			</fieldset>
+        </fields>
+    </config>
+</extension>

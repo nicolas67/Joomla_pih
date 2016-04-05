@@ -17,20 +17,6 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
     <?php
     $nbmodulesrowBas = (bool)$this->countModules('module-bas-1') + (bool)$this->countModules('module-bas-2') + (bool)$this->countModules('module-bas-3') + (bool)$this->countModules('module-bas-4');
 	?>
-    <?php
-	// verifies si on a besoin des colonnes
-	$mainclass = '';
-	if (!$this->countModules('module-gauche'))
-	{
-		$mainclass .= " noleft";
-	}
-	if (!$this->countModules('module-droit') || $app->input->getCmd('task', '') == 'edit')
-	{
-		$mainclass .= " noright";
-	}
-	$mainclass = trim($mainclass);
-    ?>
-    
 </head>
 <body>
 
@@ -56,8 +42,10 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
         </div>
         <!-- menu principal -->
         <?php if ($this->countModules('menu-haut')): ?>
-        <div id="nav" class="col-xs-12 col-sm-8 col-md-9 pa-no-h">
-            <jdoc:include type="modules" name="menu-haut" style="none" />
+        <div id="nav" class="col-xs-12 col-sm-8 col-md-9">
+			<label for="show-menu" class="show-menu">Menu</label>
+			<input type="checkbox" id="show-menu" role="button">
+			<jdoc:include type="modules" name="menu-haut" style="none" />
         </div>
         <?php endif; ?>
     </div>
@@ -65,24 +53,24 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
     <!-- ***************************************** -->       
     <!-- 4 modules : images / animations / annonce succincte... -->
     <?php if ($nbmodulesrowHaut): ?>
-	<div class="row">
+	<div class="conteneur conteneur2 row">
 		<?php if ($this->countModules('module-haut-1')) : ?>
-		<div class="<?php echo 'col-xs-'.(12/$nbmodulesrowHaut); ?> white">
+		<div id="modh1" class="<?php echo 'col-xs-'.(12/$nbmodulesrowHaut); ?> module">
 			<jdoc:include type="modules" name="module-haut-1" style="xhtml" />
 		</div>
 		<?php endif; ?>
 		<?php if ($this->countModules('module-haut-2')) : ?>
-		<div class="<?php echo 'col-xs-'.(12/$nbmodulesrowHaut); ?> white">
+		<div id="modh2" class="<?php echo 'col-xs-'.(12/$nbmodulesrowHaut); ?> module">
 			<jdoc:include type="modules" name="module-haut-2" style="xhtml" />
 		</div>
 		<?php endif; ?>
 		<?php if ($this->countModules('module-haut-3')) : ?>
-		<div class="<?php echo 'col-xs-'.(12/$nbmodulesrowHaut); ?> white">
+		<div id="modh3" class="<?php echo 'col-xs-'.(12/$nbmodulesrowHaut); ?> module">
 			<jdoc:include type="modules" name="module-haut-3" style="xhtml" />
 		</div>
 		<?php endif; ?>
 		<?php if ($this->countModules('module-haut-4')) : ?>
-		<div class="<?php echo 'col-xs-'.(12/$nbmodulesrowHaut); ?> white">
+		<div id="modh4" class="<?php echo 'col-xs-'.(12/$nbmodulesrowHaut); ?> module">
 			<jdoc:include type="modules" name="module-haut-4" style="xhtml" />
 		</div>
 		<?php endif; ?>
@@ -92,55 +80,43 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
     <!-- ***************************************** --> 
     <!-- centre --> 
     <!-- menu-gauche et centre -->
-    <div class="row ">
-	</div>
+  <div id="imageFond">
 	
 	
-    <div id="conteneur" class="row clearfix <?php echo $mainclass ?>">
-	
+    <div id="conteneur" class="conteneur">
 		
 		<?php if ($this->countModules('module-gauche')): ?>
-		<?php
-		/*
-		<div class="white gauche col-sm-4 col-md-3">
-		*/
-		?>
-		<div id="gauche" class="white gauche">
+		<div id="gauche" class="gauche">
+		  <div>
 			<jdoc:include type="modules" name="module-gauche" style="xhtml" />
+		  </div>
 		</div>
 		<?php endif; ?>
 		
-		
-		
-		<?php
-		/*
-		<div class="col-sm-<?php echo $nbmodulesrowCentre2; ?> col-md-<?php echo $nbmodulesrowCentre; ?>">
-		*/
-		?>
-		
 		<div id="milieu" class="white milieu">
-    <!-- file d'ariane : position haute -->
+			<!-- file d'ariane : position haute -->
 			<?php if ($this->countModules('ariane')): ?>
-			<div id="ariane" class="">
+			<div id="ariane" class="ariane">
 				<jdoc:include type="modules" name="ariane" style="xhtml" />
 			</div>
 			<?php endif; ?>
 			
-			
-			<!-- slide show : présentation / offre / ... -->
-			<jdoc:include type="modules" name="slideshow" style="xhtml" />
+			<div>
+				<!-- slide show : présentation / offre / ... -->
+				<jdoc:include type="modules" name="slideshow" style="xhtml" />
 
-			<!-- message : alerte / infos / ... -->
-			<jdoc:include type="message" />
-			<!-- contenu -->
-			<jdoc:include type="component" />
-
+				<!-- message : alerte / infos / ... -->
+				<jdoc:include type="message" />
+				<!-- contenu -->
+				<jdoc:include type="component" />
+			</div>
 			<!-- file d'ariane : position basse -->
 			<?php if ($this->countModules('ariane-bas')): ?>
-			<jdoc:include type="modules" name="ariane-bas" style="xhtml" />
+			<div id="ariane2" class="ariane">
+				<jdoc:include type="modules" name="ariane-bas" style="xhtml" />
+			</div>
 			<?php endif; ?>
 		</div>
-		
 		
 		<?php if ($this->countModules('module-droit')) : ?>
 		<div id="droit" class="white droit">
@@ -148,31 +124,30 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 		</div>
 		<?php endif; ?>
 		
-		
     </div>
 
     <!-- ***************************************** -->
     <!-- bas de page -->
 	<?php if ($nbmodulesrowBas): ?>
-    <div id="footer" class="row">
+    <div id="footer" class="conteneur row">
 	<!-- 4 modules : menu bas de page / images / ... -->
 		<?php if ($this->countModules('module-bas-1')) : ?>
-		<div class="<?php echo 'col-xs-'.(12/$nbmodulesrowBas); ?> white">
+		<div class="<?php echo 'col-xs-'.(12/$nbmodulesrowBas); ?> white module">
 			<jdoc:include type="modules" name="module-bas-1" style="xhtml" />
 		</div>
 		<?php endif; ?>
 		<?php if ($this->countModules('module-bas-2')) : ?>
-		<div class="<?php echo 'col-xs-'.(12/$nbmodulesrowBas); ?> white">
+		<div class="<?php echo 'col-xs-'.(12/$nbmodulesrowBas); ?> white module">
 			<jdoc:include type="modules" name="module-bas-2" style="xhtml" />
 		</div>
 		<?php endif; ?>
 		<?php if ($this->countModules('module-bas-3')) : ?>
-		<div class="<?php echo 'col-xs-'.(12/$nbmodulesrowBas); ?> white">
+		<div class="<?php echo 'col-xs-'.(12/$nbmodulesrowBas); ?> white module">
 			<jdoc:include type="modules" name="module-bas-3" style="xhtml" />
 		</div>
 		<?php endif; ?>
 		<?php if ($this->countModules('module-bas-4')) : ?>
-		<div class="<?php echo 'col-xs-'.(12/$nbmodulesrowBas); ?> white">
+		<div class="<?php echo 'col-xs-'.(12/$nbmodulesrowBas); ?> white module">
 			<jdoc:include type="modules" name="module-bas-4" style="xhtml" />
 		</div>
 		<?php endif; ?>
@@ -181,7 +156,7 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 		
 	<!-- menu bas de page / liens / ... -->
 	<?php if ($this->countModules('menu-bas')): ?>
-	<div class="row">
+	<div id="menuBas" class="row">
 		<div id="nav2" class="col-xs-12 white">
 			<jdoc:include type="modules" name="menu-bas" style="none" />
 		</div>
@@ -189,12 +164,13 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 	<?php endif; ?>
 
 	<!-- informations site, copyright, société, ... -->
-	<div class="row">
+	<div id="info" class="row">
 		<div class="col-sm-12">
 			<jdoc:include type="modules" name="informations" style="none" />
 		</div>
 	</div>
 	
+  </div>
 <!-- fin wrapper 1 -->
 </div>
 </div>
